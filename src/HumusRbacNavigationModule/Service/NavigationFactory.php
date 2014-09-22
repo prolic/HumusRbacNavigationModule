@@ -32,7 +32,7 @@ class NavigationFactory extends \SpiffyNavigation\Service\NavigationFactory
     {
         $navigation = parent::createService($serviceLocator);
 
-        $listener = $serviceLocator->get('DimabayApp\NavigationRbacListener');
+        $listener = $serviceLocator->get('HumusRbacNavigationModule\NavigationRbacListener');
         /* @var $listener \HumusRbacNavigationModule\NavigationRbacListener */
         $listener->attach($navigation->getEventManager());
 
