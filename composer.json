@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.3.23",
         "zendframework/zend-mvc": ">=2.3.0",
-        "spiffy/spiffy-navigation": "dev-master",
+        "spiffy/spiffy-navigation": ">=1.0.0",
         "zf-commons/zfc-rbac": ">=2.4.0"
     },
     "require-dev": {
