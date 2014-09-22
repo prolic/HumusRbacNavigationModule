@@ -37,3 +37,13 @@ Example-Configuration
             'HumusRbacNavigationModule',
         )
     );
+
+Usage
+-----
+
+1. Create your navigation using SpiffyNavigation as usual,
+   you don't need to set any special keys in the navigation config.
+
+2. Configure ZfcRbac to guard all your routes.
+
+3. The routes guarded will be hidden in SpiffyNavigation automatically.
