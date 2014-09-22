@@ -5,8 +5,6 @@ HumusRbacNavigationModule
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/prolic/HumusRbacNavigationModule/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/prolic/HumusRbacNavigationModule/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/prolic/HumusRbacNavigationModule/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/prolic/HumusRbacNavigationModule/?branch=master)
 [![License](https://poser.pugx.org/prolic/humus-rbac-navigation-module/license.svg)](https://packagist.org/packages/prolic/humus-rbac-navigation-module)
-[![Latest Stable Version](https://poser.pugx.org/prolic/humus-rbac-navigation-module/v/stable.svg)](https://packagist.org/packages/prolic/humus-rbac-navigation-module)
-[![Latest Unstable Version](https://poser.pugx.org/prolic/humus-rbac-navigation-module/v/unstable.svg)](https://packagist.org/packages/prolic/humus-rbac-navigation-module)
 [![Total Downloads](https://poser.pugx.org/prolic/humus-rbac-navigation-module/downloads.svg)](https://packagist.org/packages/prolic/humus-rbac-navigation-module)
 
 Integration of ZfcRbac and SpiffyNavigation for Zend Framework 2
