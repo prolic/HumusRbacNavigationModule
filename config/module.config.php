@@ -20,6 +20,9 @@ namespace HumusRbacNavigationModule;
 
 return array(
     'service_manager' => array(
-
+        'factories' => array(
+            __NAMESPACE__ . '\NavigationRbacListener' => __NAMESPACE__ . '\Service\NavigationRbacListenerFactory',
+            'SpiffyNavigation\Service\Navigation' => __NAMESPACE__ . '\Service\NavigationFactory',
+        ),
     ),
 );
