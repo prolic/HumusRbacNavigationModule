@@ -26,3 +26,14 @@ Installation
  1.  Add `"prolic/humus-rbac-navigation-module": "dev-master"` to your `composer.json`
  2.  Run `php composer.phar install`
  3.  Enable the module in your `config/application.config.php` by adding `HumusRbacNavigationModule` to `modules`
+
+Example-Configuration
+---------------------
+
+    return array(
+        'modules' => array(
+            'ZfcRbac',
+            'SpiffyNavigation',
+            'HumusRbacNavigationModule',
+        )
+    );
