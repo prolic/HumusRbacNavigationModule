@@ -1,0 +1,30 @@
+{
+    "name": "prolic/humus-rbac-navigation-module",
+    "type": "library",
+    "description": "Integration of ZfcRbac and SpiffyNavigation for Zend Framework 2",
+    "keywords": ["zf2", "rbac", "zfc-rbac", "humus", "navigation"],
+    "homepage": "https://github.com/prolic/HumusRbacNavigationModule",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sascha-Oliver Prolic",
+            "email": "saschaprolic@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.23",
+        "zendframework/zend-mvc": ">=2.3.0",
+        "spiffy/spiffy-navigation": "dev-master",
+        "zf-commons/zfc-rbac": ">=2.4.0"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": ">=4.0",
+        "squizlabs/php_codesniffer": "1.5.*",
+        "zendframework/zendframework": ">=2.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "HumusRbacNavigationModule": "src"
+        }
+    }
+}
