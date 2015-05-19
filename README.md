@@ -12,7 +12,7 @@ Integration of ZfcRbac and SpiffyNavigation for Zend Framework 2
 Dependencies
 ------------
 
- - PHP 5.3.23
+ - PHP 5.4.0
  - [SpiffyNavigation](https://github.com/spiffyjr/spiffy-navigation/)
  - [Zfr-Rbac](https://github.com/zf-fr/rbac/)
  - [ZF-Commons Rbac](https://github.com/ZF-Commons/zfc-rbac/)
