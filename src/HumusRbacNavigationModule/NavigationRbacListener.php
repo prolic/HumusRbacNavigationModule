@@ -22,23 +22,29 @@ use SpiffyNavigation\NavigationEvent;
 use SpiffyNavigation\Service\Navigation;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;
-use Zend\Mvc\MvcEvent;
-use Zend\Mvc\Router\RouteMatch;
-use ZfcRbac\Guard\GuardInterface;
+use ZfcRbac\Service\AuthorizationServiceInterface;
+use ZfcRbac\Service\RoleService;
 
 class NavigationRbacListener extends AbstractListenerAggregate
 {
     /**
-     * @var GuardInterface
+     * @var AuthorizationServiceInterface $authorizationService
      */
-    protected $guard;
+    protected $authorizationService;
 
     /**
-     * @param GuardInterface $guard
+     * @var RoleService $roleService
      */
-    public function __construct(GuardInterface $guard)
+    protected $roleService;
+
+    /**
+     * @param AuthorizationServiceInterface $authorizationService
+     * @param RoleService $roleService
+     */
+    public function __construct(AuthorizationServiceInterface $authorizationService, RoleService $roleService)
     {
-        $this->guard = $guard;
+        $this->authorizationService = $authorizationService;
+        $this->roleService = $roleService;
     }
 
     /**
@@ -59,18 +65,14 @@ class NavigationRbacListener extends AbstractListenerAggregate
         $page    = $event->getTarget();
         $options = $page->getOptions();
 
-        if (!isset($options['route'])) {
-            return true;
+        if (isset($options['role'])) {
+            return $this->roleService->matchIdentityRoles([$options['role']]);
         }
 
-        $route = $options['route'];
+        if (isset($options['permission'])) {
+            return $this->authorizationService->isGranted($options['permission']);
+        }
 
-        $routeMatch = new RouteMatch(array());
-        $routeMatch->setMatchedRouteName($route);
-
-        $event = new MvcEvent();
-        $event->setRouteMatch($routeMatch);
-
-        return $this->guard->isGranted($event);
+        return true;
     }
 }

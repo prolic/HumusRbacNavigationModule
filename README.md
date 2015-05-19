@@ -39,9 +39,7 @@ Example-Configuration
 Usage
 -----
 
-1. Create your navigation using SpiffyNavigation as usual,
-   you don't need to set any special keys in the navigation config.
+Create your navigation using SpiffyNavigation as usual,
+you can either set the "role" or the "permission" option to any route.
 
-2. Configure ZfcRbac to guard all your routes.
-
-3. The routes guarded will be hidden in SpiffyNavigation automatically.
+The navigation entries will be hidden in SpiffyNavigation automatically.

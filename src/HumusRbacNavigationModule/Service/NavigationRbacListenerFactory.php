@@ -32,10 +32,11 @@ class NavigationRbacListenerFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $guardPluginManager = $serviceLocator->get('ZfcRbac\Guard\GuardPluginManager');
-        $routeGuard = $guardPluginManager->get('ZfcRbac\Guard\RouteGuard');
+        $authService = $serviceLocator->get('ZfcRbac\Service\AuthorizationService');
+        $roleService = $serviceLocator->get('ZfcRbac\Service\RoleService');
 
-        $rbacListener = new NavigationRbacListener($routeGuard);
+        $rbacListener = new NavigationRbacListener($authService, $roleService);
+
         return $rbacListener;
     }
 }
