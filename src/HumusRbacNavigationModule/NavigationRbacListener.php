@@ -65,12 +65,12 @@ class NavigationRbacListener extends AbstractListenerAggregate
         $page    = $event->getTarget();
         $options = $page->getOptions();
 
-        if (isset($options['role'])) {
-            return $this->roleService->matchIdentityRoles([$options['role']]);
-        }
-
         if (isset($options['permission'])) {
             return $this->authorizationService->isGranted($options['permission']);
+        }
+
+        if (isset($options['roles'])) {
+            return $this->roleService->matchIdentityRoles($options['roles']);
         }
 
         return true;
